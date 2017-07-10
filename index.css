@@ -1,0 +1,47 @@
+html,body{
+
+background-color: #D6D6D6;
+}
+
+.container {
+    margin: 100px auto 0;
+    border: 2px solid white;
+    width: 600px
+}
+
+.mainBody{
+    padding: 20px;
+}
+
+.menu-on {
+    width: 48px;
+    height: 42px;
+    padding: 40px 40px;
+    position: absolute;
+    top:10px;
+    right: 380px;
+}
+
+.hamburger-stripe {
+    background-color: black;
+    height: 3px;
+    margin-bottom: 5px;
+    margin-top:5px;
+}
+.main-nav {
+    position: absolute;
+    right:0;
+    top:25px;
+    margin-right: 480px;
+}
+.hidden{
+    display: none;
+}
+.welcome{
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+
+

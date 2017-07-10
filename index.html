@@ -3,35 +3,48 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>J. Random Hacker</title>
+        <title></title>
+         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+            <div class="container">
+
         <header>
-            <h1>J. Random Hacker</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li class="main-nav-link"><a href="#about">About me</a></li>
-                    <li class="main-nav-link"><a href="#work">My work</a></li>
-                    <li class="main-nav-link"><a href="#contact">Contact me</a></li>
+            <div class="welcome">Welcome...
+            </div>
+            <div class="menu-on">
+                <div class="hamburger-stripe"></div>
+                <div class="hamburger-stripe"></div>
+                <div class="hamburger-stripe"></div>
+            </div>
+
+            <nav class="main-nav hidden">
+                <ul class "links">
+                    <li class="main-nav-link"><a href="#about" id="about">About me</a></li>
+                    <li class="main-nav-link"><a href="#work" id="work">My work</a></li>
+                    <li class="main-nav-link"><a href="#contact" id="contact">Contact me</a></li>
                 </ul>
             </nav>
+        </header>
 
-            <img class="headshot" src="http://unsplash.it/150/150"
+        <div class="mainBody">
+
+        <section class="about-me hidden">
+             <h3>Saule Bokhoni</h3>
+              <img class="headshot" src="http://unsplash.it/150/150"
                 alt="J. Random Hacker headshot">
+
 
             <p class="about" id="about">
                 Hi, I'm J. Random Hacker, a full-stack web developer from Nowheresville, USA.  I use React and Node.js to build web apps which leave you with a minty fresh taste in your mouth.  Outside of coding I enjoy watching <a href="https://www.youtube.com/watch?v=6SFNW5F8K9Y">this video</a> on repeat.
             </p>
-            <nav class="contact-links">
-                <ul>
-                    <li class="contact-link contact-link-email"><a href="mailto:saulebohoney@gmail.com">Email</a>
-                    <li class="contact-link contact-link-linkedin"><a href="https://www.linkedin.com">LinkedIn</a>
-                    <li class="contact-link contact-link-github"><a href="https://github.com/saulebohoney">GitHub</a>
-                </ul>
-            </nav>
-        </header>
-        <section class="work" id="work">
+
+        </section>
+  
+
+        <section class="work hidden" id="work">
             <h2>My work</h2>
+            
             <section class="project">
                 <h3>Frobnicator</h3>
                 <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=1"
@@ -61,6 +74,9 @@
                     </ul>
                 </nav>
             </section>
+
+
+
             <section class="project">
                 <h3>FooBar</h3>
                 <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=2"
@@ -90,6 +106,9 @@
                     </ul>
                 </nav>
             </section>
+
+
+
             <section class="project">
                 <h3>AliceBob</h3>
                 <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=3"
@@ -119,6 +138,9 @@
                     </ul>
                 </nav>
             </section>
+
+
+
             <section class="project">
                 <h3>Wibble</h3>
                 <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=4"
@@ -147,20 +169,54 @@
                         </li>
                     </ul>
                 </nav>
+
             </section>
+
         </section>
-        <section class="contact" id="contact">
+
+         <section class="contact hidden" id="contact">
             <h2>Contact me</h2>
-            <form action="https://formspree.io/jrandomhacker@example.com"
-                  method="POST">
-                <label for="contact-form-name">Your Name</label>
-                <input type="text" name="name" id="contact-form-name" placeholder="Grace Hopper">
-                <label for="contact-form-email">Your Email Address</label>
-                <input type="email" name="_replyto" id="contact-form-email" placeholder="grace@example.com">
-                <label for="contact-form-message">Message</label>
-                <textarea name="message" id="contact-form-message"></textarea>
-                <input type="submit" value="Send message">
-            </form> 
+            <nav class="contact-links">
+                <ul>
+                    <li class="contact-link contact-link-email"><a href="mailto:saulebohoney@gmail.com">Email</a>
+                    <li class="contact-link contact-link-linkedin"><a href="https://www.linkedin.com">LinkedIn</a>
+                    <li class="contact-link contact-link-github"><a href="https://github.com/saulebohoney">GitHub</a>
+                </ul>
+            </nav>
+
         </section>
+        
+        </div>
+
+</div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+         
+         
+            <script> $(".menu-on").click(function() {
+                    $(".main-nav").toggleClass("hidden");
+                  });
+            </script>
+
+            <script> $("#about").click(function() {
+              $(".mainBody > section").addClass("hidden");
+              $(".welcome").addClass("hidden");
+              $(".about-me").removeClass("hidden");
+            });
+
+            $("#work").click(function() {
+              $(".mainBody > section").addClass("hidden");
+              $(".welcome").addClass("hidden");
+              $(".work").removeClass("hidden");
+            });
+
+            $("#contact").click(function() {
+              $(".mainBody > section").addClass("hidden");
+              $(".welcome").addClass("hidden");
+              $(".welcome").addClass("hidden");
+              $(".contact").removeClass("hidden");
+               });
+            </script>
+
     </body>
 </html>
